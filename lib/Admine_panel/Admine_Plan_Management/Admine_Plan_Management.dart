@@ -346,8 +346,8 @@ class _AdminePlanManagementState extends State<AdminePlanManagement> {
                                     child: Text(
                                       "Create Module",
                                       style: TextStyle(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.w500,
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w600,
                                         color: Color(0xff757575),
                                       ),
                                     ),

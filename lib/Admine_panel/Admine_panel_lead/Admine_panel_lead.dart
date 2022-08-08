@@ -36,8 +36,8 @@ class _AdmineLeadState extends State<AdmineLead> {
   String? _selected;
   List<String> _locations3 = [
     'WIP ',
-    ' Qualified-Opp',
-    ' Qualified-NonCust',
+    ' Qualified-Opportunity',
+    ' Qualified-NonCustomer',
     'Unqualified'
   ];
   String? _selected1;

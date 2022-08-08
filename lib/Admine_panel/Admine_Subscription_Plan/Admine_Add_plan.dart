@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:ui';
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -18,6 +19,11 @@ class AdmineAddPlan extends StatefulWidget {
 
 class _AdmineAddPlanState extends State<AdmineAddPlan> {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  String dropdownvalue = 'English';
+  var items = [
+    'English',
+    'Vietnamese',
+  ];
 
   var birthDate = '';
   var w;
@@ -186,16 +192,51 @@ class _AdmineAddPlanState extends State<AdmineAddPlan> {
                                             fillColor: Color(0xffECECEC)),
                                       ),
                                     ),
-                                    Container(
-                                      margin: EdgeInsets.only(left: 13),
-                                      height: 30,
-                                      width: 30,
-                                      color: Color(0xffE31D1C),
-                                      child: Center(
-                                        child: Icon(
-                                          Icons.star,
-                                          size: 20,
-                                          color: Color(0xffFFD221),
+                                    InkWell(
+                                      onTap: () {
+                                        DropdownButton<String>(
+                                          hint: Text("chooselanguage"),
+                                          value: dropdownvalue,
+                                          dropdownColor: Colors.white,
+                                          focusColor: Colors.white,
+                                          // Down Arrow Icon
+
+                                          icon: Icon(Icons.arrow_drop_down),
+                                          iconSize: 30,
+                                          elevation: 16,
+                                          style: TextStyle(color: Colors.black),
+                                          onChanged: (String? newValue) {
+                                            setState(() {
+                                              dropdownvalue = newValue!;
+                                            });
+                                            if (dropdownvalue == "English") {
+                                              context.locale =
+                                                  Locale("en", "US");
+                                            } else if (dropdownvalue ==
+                                                "'Vietnamese'") {
+                                              context.locale =
+                                                  Locale("vt", "US");
+                                            }
+                                          },
+                                          items: items.map((String items) {
+                                            return DropdownMenuItem(
+                                              value: items,
+                                              child: Text(items),
+                                            );
+                                          }).toList(),
+                                        );
+                                      },
+                                      child: Container(
+                                        margin: EdgeInsets.only(left: 13),
+                                        height: 30,
+                                        width: 30,
+                                        color: Color(0xffE31D1C),
+                                        child: Center(
+                                          child: Icon(
+                                            Icons.star,
+                                            size: 20,
+                                            color: Color(0xffFFD221),
+                                          ),
                                         ),
                                       ),
                                     ),
@@ -280,58 +321,58 @@ class _AdmineAddPlanState extends State<AdmineAddPlan> {
                       ),
                     ),
                   ),
-                  Row(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(
-                            right: (Responsive.isDesktop(context))
-                                ? w * 0.01
-                                : w * 0.02),
-                        child: Container(
-                          height: h * 0.065,
-                          width: (Responsive.isDesktop(context))
-                              ? w * 0.14
-                              : (Responsive.isDesktop(context))
-                                  ? w * 0.4
-                                  : w * 0.52,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
-                            color: Color(0xffFFFFFF),
-                          ),
-                          child: TextFormField(
-                            decoration: InputDecoration(
-                                hintText: "Search",
-                                suffixIcon: IconButton(
-                                  icon: Icon(Icons.search),
-                                  onPressed: () {},
-                                ),
-                                border: OutlineInputBorder(),
-                                fillColor: Color(0xffECECEC)),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(
-                            right: (Responsive.isDesktop(context))
-                                ? w * 0.005
-                                : w * 0.007),
-                        child: Container(
-                          margin: EdgeInsets.only(right: w * 0.01),
-                          height: h * 0.06,
-                          width: (Responsive.isDesktop(context))
-                              ? w * 0.03
-                              : w * 0.07,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
-                            color: Color(0xffFFFFFF),
-                          ),
-                          child: Center(
-                            child: Icon(Icons.tune),
-                          ),
-                        ),
-                      )
-                    ],
-                  )
+                  // Row(
+                  //   children: [
+                  //     Padding(
+                  //       padding: EdgeInsets.only(
+                  //           right: (Responsive.isDesktop(context))
+                  //               ? w * 0.01
+                  //               : w * 0.02),
+                  //       child: Container(
+                  //         height: h * 0.065,
+                  //         width: (Responsive.isDesktop(context))
+                  //             ? w * 0.14
+                  //             : (Responsive.isDesktop(context))
+                  //                 ? w * 0.4
+                  //                 : w * 0.52,
+                  //         decoration: BoxDecoration(
+                  //           borderRadius: BorderRadius.circular(5),
+                  //           color: Color(0xffFFFFFF),
+                  //         ),
+                  //         child: TextFormField(
+                  //           decoration: InputDecoration(
+                  //               hintText: "Search",
+                  //               suffixIcon: IconButton(
+                  //                 icon: Icon(Icons.search),
+                  //                 onPressed: () {},
+                  //               ),
+                  //               border: OutlineInputBorder(),
+                  //               fillColor: Color(0xffECECEC)),
+                  //         ),
+                  //       ),
+                  //     ),
+                  //     Padding(
+                  //       padding: EdgeInsets.only(
+                  //           right: (Responsive.isDesktop(context))
+                  //               ? w * 0.005
+                  //               : w * 0.007),
+                  //       child: Container(
+                  //         margin: EdgeInsets.only(right: w * 0.01),
+                  //         height: h * 0.06,
+                  //         width: (Responsive.isDesktop(context))
+                  //             ? w * 0.03
+                  //             : w * 0.07,
+                  //         decoration: BoxDecoration(
+                  //           borderRadius: BorderRadius.circular(5),
+                  //           color: Color(0xffFFFFFF),
+                  //         ),
+                  //         child: Center(
+                  //           child: Icon(Icons.tune),
+                  //         ),
+                  //       ),
+                  //     )
+                  //   ],
+                  // )
                 ],
               ),
               SizedBox(
@@ -978,7 +1019,7 @@ class _AdmineAddPlanState extends State<AdmineAddPlan> {
                                     Padding(
                                       padding: EdgeInsets.only(left: w * 0.00),
                                       child: Text(
-                                        "Knowledge",
+                                        "Knowledgebase",
                                         style: TextStyle(
                                           fontSize: 10,
                                           fontWeight: FontWeight.w500,
@@ -2120,7 +2161,7 @@ class _AdmineAddPlanState extends State<AdmineAddPlan> {
       context: context,
       initialDate: DateTime.now(),
       firstDate: DateTime(1950),
-      lastDate: DateTime(2025),
+      lastDate: DateTime(3025),
       fieldHintText: "DATE/MONTH/YEAR",
     );
     if (birthselected != null && birthselected != selectedDate)

@@ -75,7 +75,7 @@ class _AdminVarificationState extends State<AdminVarification> {
                     ),
                     Align(
                       alignment: Alignment.center,
-                      child: Text("One time password is send to your ",
+                      child: Text("One time password is sent to your ",
                           style: TextStyle(
                               fontSize:
                                   (Responsive.isDesktop(context)) ? 14 : 13,

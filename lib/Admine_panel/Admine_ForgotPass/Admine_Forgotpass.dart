@@ -103,7 +103,7 @@ class _AdmineForgotPassState extends State<AdmineForgotPass> {
                               : w * 0.1,
                           top: h * 0.015),
                       child: Text(
-                        "User Id",
+                        "Email Id",
                         style: TextStyle(
                             fontSize: (Responsive.isDesktop(context)) ? 18 : 12,
                             fontWeight: FontWeight.w500,

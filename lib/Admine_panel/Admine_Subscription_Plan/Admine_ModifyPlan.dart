@@ -270,65 +270,65 @@ class _AdmineModifyPlanState extends State<AdmineModifyPlan> {
                   Padding(
                     padding: EdgeInsets.only(left: w * 0.01),
                     child: Text(
-                      "Add Plan",
+                      "Modify Plan",
                       style: TextStyle(
                         fontSize: (Responsive.isDesktop(context)) ? 25 : 13,
                         fontWeight: FontWeight.w500,
                       ),
                     ),
                   ),
-                  Row(
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(
-                            right: (Responsive.isDesktop(context))
-                                ? w * 0.01
-                                : w * 0.02),
-                        child: Container(
-                          height: h * 0.065,
-                          width: (Responsive.isDesktop(context))
-                              ? w * 0.14
-                              : (Responsive.isDesktop(context))
-                                  ? w * 0.4
-                                  : w * 0.52,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
-                            color: Color(0xffFFFFFF),
-                          ),
-                          child: TextFormField(
-                            decoration: InputDecoration(
-                                hintText: "Search",
-                                suffixIcon: IconButton(
-                                  icon: Icon(Icons.search),
-                                  onPressed: () {},
-                                ),
-                                border: OutlineInputBorder(),
-                                fillColor: Color(0xffECECEC)),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(
-                            right: (Responsive.isDesktop(context))
-                                ? w * 0.005
-                                : w * 0.007),
-                        child: Container(
-                          margin: EdgeInsets.only(right: w * 0.01),
-                          height: h * 0.06,
-                          width: (Responsive.isDesktop(context))
-                              ? w * 0.03
-                              : w * 0.07,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(5),
-                            color: Color(0xffFFFFFF),
-                          ),
-                          child: Center(
-                            child: Icon(Icons.tune),
-                          ),
-                        ),
-                      )
-                    ],
-                  )
+                  // Row(
+                  //   children: [
+                  //     Padding(
+                  //       padding: EdgeInsets.only(
+                  //           right: (Responsive.isDesktop(context))
+                  //               ? w * 0.01
+                  //               : w * 0.02),
+                  //       child: Container(
+                  //         height: h * 0.065,
+                  //         width: (Responsive.isDesktop(context))
+                  //             ? w * 0.14
+                  //             : (Responsive.isDesktop(context))
+                  //                 ? w * 0.4
+                  //                 : w * 0.52,
+                  //         decoration: BoxDecoration(
+                  //           borderRadius: BorderRadius.circular(5),
+                  //           color: Color(0xffFFFFFF),
+                  //         ),
+                  //         child: TextFormField(
+                  //           decoration: InputDecoration(
+                  //               hintText: "Search",
+                  //               suffixIcon: IconButton(
+                  //                 icon: Icon(Icons.search),
+                  //                 onPressed: () {},
+                  //               ),
+                  //               border: OutlineInputBorder(),
+                  //               fillColor: Color(0xffECECEC)),
+                  //         ),
+                  //       ),
+                  //     ),
+                  //     Padding(
+                  //       padding: EdgeInsets.only(
+                  //           right: (Responsive.isDesktop(context))
+                  //               ? w * 0.005
+                  //               : w * 0.007),
+                  //       child: Container(
+                  //         margin: EdgeInsets.only(right: w * 0.01),
+                  //         height: h * 0.06,
+                  //         width: (Responsive.isDesktop(context))
+                  //             ? w * 0.03
+                  //             : w * 0.07,
+                  //         decoration: BoxDecoration(
+                  //           borderRadius: BorderRadius.circular(5),
+                  //           color: Color(0xffFFFFFF),
+                  //         ),
+                  //         child: Center(
+                  //           child: Icon(Icons.tune),
+                  //         ),
+                  //       ),
+                  //     )
+                  //   ],
+                  // )
                 ],
               ),
               SizedBox(
@@ -975,7 +975,7 @@ class _AdmineModifyPlanState extends State<AdmineModifyPlan> {
                                     Padding(
                                       padding: EdgeInsets.only(left: w * 0.00),
                                       child: Text(
-                                        "Knowledge",
+                                        "Knowledgebase",
                                         style: TextStyle(
                                           fontSize: 10,
                                           fontWeight: FontWeight.w500,
@@ -2117,7 +2117,7 @@ class _AdmineModifyPlanState extends State<AdmineModifyPlan> {
       context: context,
       initialDate: DateTime.now(),
       firstDate: DateTime(1950),
-      lastDate: DateTime(2025),
+      lastDate: DateTime(3025),
       fieldHintText: "DATE/MONTH/YEAR",
     );
     if (birthselected != null && birthselected != selectedDate)

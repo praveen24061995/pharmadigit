@@ -41,6 +41,7 @@ dependencies:
   responsive_table: ^0.2.0+2
   data_table_2: ^2.3.5
   location: ^4.4.0
+  easy_localization: ^3.0.1
 
 dev_dependencies:
   flutter_test:
@@ -68,6 +69,7 @@ flutter:
   assets:
     - assets/
     # - images/a_dot_ham.jpeg
+    - assets/translation/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

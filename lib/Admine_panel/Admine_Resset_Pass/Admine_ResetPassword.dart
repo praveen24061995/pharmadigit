@@ -147,7 +147,7 @@ class _AdmineRessetPassState extends State<AdmineRessetPass> {
                                 : w * 0.1,
                             top: h * 0.015),
                         child: Text(
-                          "Rey-type Password",
+                          "Confirm Password",
                           style: TextStyle(
                               fontSize:
                                   (Responsive.isDesktop(context)) ? 18 : 12,

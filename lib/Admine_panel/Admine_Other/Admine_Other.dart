@@ -45,17 +45,12 @@ class _AdmineOtherState extends State<AdmineOther> {
     ' Annually',
   ];
   String? _otherdrop4;
-  List<String> _other5 = [
-    'Mr.  ',
-    'Mrs. ',
-    'Miss. ',
-    'Dr.Hon.',
-  ];
+  List<String> _other5 = ['Mr.  ', 'Mrs. ', 'Miss. ', 'Dr.', 'Hon.'];
   String? _otherdrop5;
   List<String> _other6 = [
     'Active',
     'DND(Do-Not-Disturb)',
-    ' NR(No-reachable)',
+    ' NR(Not-reachable)',
   ];
   String? _otherdrop6;
   List<String> _other7 = [

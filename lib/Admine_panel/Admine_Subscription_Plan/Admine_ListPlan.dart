@@ -417,23 +417,26 @@ class _AdmineListPlanState extends State<AdmineListPlan> {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
-                                    Row(
-                                      children: [
-                                        Icon(
-                                          Icons.edit,
-                                          color: Color(0xff000000),
-                                        ),
-                                        Text(
-                                          "/",
-                                          style: TextStyle(
-                                            fontSize: 25,
+                                    Padding(
+                                      padding: EdgeInsets.only(left: w * 0.045),
+                                      child: Row(
+                                        children: [
+                                          Icon(
+                                            Icons.edit,
+                                            color: Color(0xff000000),
                                           ),
-                                        ),
-                                        Icon(
-                                          Icons.delete,
-                                          color: Color(0xff757575),
-                                        ),
-                                      ],
+                                          Text(
+                                            "/",
+                                            style: TextStyle(
+                                              fontSize: 25,
+                                            ),
+                                          ),
+                                          Icon(
+                                            Icons.delete,
+                                            color: Color(0xff757575),
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                   ],
                                 )),

@@ -1,3 +1,4 @@
+import 'package:data_table_2/data_table_2.dart';
 import 'package:flutter/material.dart';
 import '../../Responsive/Responsiv.dart';
 import '../Admine_Drawer/Admine_Drawer.dart';
@@ -286,8 +287,8 @@ class _AdmineManageClientState extends State<AdmineManageClient> {
                             child: Text(
                               "Add Client",
                               style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w500,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w600,
                                 color: Color(0xff757575),
                               ),
                             ),
@@ -352,6 +353,97 @@ class _AdmineManageClientState extends State<AdmineManageClient> {
               Divider(
                 thickness: 1,
                 color: Color(0xffC1C1C1),
+              ),
+              SizedBox(
+                height: h * 0.001,
+              ),
+              Center(
+                child: Container(
+                  height: h,
+                  width: w,
+                  color: Color(0xffF4F4F4),
+                  child: DataTable2(
+                      // columnSpacing: 12,
+                      // horizontalMargin: 12,
+                      // minWidth: 600,
+                      columns: [
+                        DataColumn2(
+                          label: Text(
+                            'Name of Client',
+                            style: TextStyle(
+                                fontSize:
+                                    (Responsive.isDesktop(context)) ? 15 : 12,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.black),
+                          ),
+                          size: ColumnSize.L,
+                        ),
+                        DataColumn(
+                          label: Text(
+                            'Plan ID',
+                            style: TextStyle(
+                                fontSize:
+                                    (Responsive.isDesktop(context)) ? 15 : 12,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.black),
+                          ),
+                        ),
+                        DataColumn(
+                          label: Text(
+                            'Plan',
+                            style: TextStyle(
+                                fontSize:
+                                    (Responsive.isDesktop(context)) ? 15 : 12,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.black),
+                          ),
+                        ),
+                        DataColumn(
+                          label: Text(
+                            'Status',
+                            style: TextStyle(
+                                fontSize:
+                                    (Responsive.isDesktop(context)) ? 15 : 12,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.black),
+                          ),
+                        ),
+                        DataColumn(
+                          label: Padding(
+                            padding: EdgeInsets.only(left: w * 0.05),
+                            child: Text(
+                              'Hosting Server',
+                              style: TextStyle(
+                                  fontSize:
+                                      (Responsive.isDesktop(context)) ? 15 : 12,
+                                  fontWeight: FontWeight.w600,
+                                  color: Colors.black),
+                            ),
+                          ),
+                        ),
+                      ],
+                      rows: List<DataRow>.generate(
+                          1,
+                          (index) => DataRow(cells: [
+                                DataCell(Padding(
+                                  padding: EdgeInsets.only(left: w * 0.015),
+                                  child: Text('Ems'),
+                                )),
+                                DataCell(Text('123486')),
+                                DataCell(Text('Gold')),
+                                DataCell(Text('Active')),
+                                DataCell(Padding(
+                                  padding: EdgeInsets.only(left: w * 0.052),
+                                  child: Row(
+                                    children: [
+                                      Text(
+                                        "Shared Server",
+                                      ),
+                                    ],
+                                  ),
+                                )),
+                              ]))),
+                ),
               ),
             ],
           ),
@@ -432,7 +524,7 @@ class _AdmineManageClientState extends State<AdmineManageClient> {
                               Padding(
                                 padding: EdgeInsets.only(
                                     left: (Responsive.isDesktop(context))
-                                        ? w * 0.205
+                                        ? w * 0.21
                                         : w * 0.09),
                                 child: Text(
                                   "Client Name",
@@ -559,7 +651,7 @@ class _AdmineManageClientState extends State<AdmineManageClient> {
                                       ),
                                       Padding(
                                         padding:
-                                            EdgeInsets.only(left: w * 0.183),
+                                            EdgeInsets.only(left: w * 0.185),
                                         child: Text(
                                           "Client License No.",
                                           style: TextStyle(
@@ -728,7 +820,7 @@ class _AdmineManageClientState extends State<AdmineManageClient> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.only(left: w * 0.15),
+                              padding: EdgeInsets.only(left: w * 0.139),
                               child: Text(
                                 "Status",
                                 style: TextStyle(
@@ -739,7 +831,7 @@ class _AdmineManageClientState extends State<AdmineManageClient> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.only(left: w * 0.22),
+                              padding: EdgeInsets.only(left: w * 0.205),
                               child: Text(
                                 "Website",
                                 style: TextStyle(
@@ -750,6 +842,9 @@ class _AdmineManageClientState extends State<AdmineManageClient> {
                               ),
                             ),
                           ],
+                        ),
+                        SizedBox(
+                          height: h * 0.005,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -833,7 +928,7 @@ class _AdmineManageClientState extends State<AdmineManageClient> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.only(left: w * 0.2),
+                              padding: EdgeInsets.only(left: w * 0.185),
                               child: Text(
                                 "Time Zone",
                                 style: TextStyle(
@@ -844,7 +939,7 @@ class _AdmineManageClientState extends State<AdmineManageClient> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.only(left: w * 0.2),
+                              padding: EdgeInsets.only(left: w * 0.19),
                               child: Text(
                                 "Business Hours",
                                 style: TextStyle(
@@ -960,7 +1055,7 @@ class _AdmineManageClientState extends State<AdmineManageClient> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.only(left: w * 0.37),
+                              padding: EdgeInsets.only(left: w * 0.34),
                               child: Text(
                                 "Email Id",
                                 style: TextStyle(
@@ -1034,7 +1129,7 @@ class _AdmineManageClientState extends State<AdmineManageClient> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.only(left: w * 0.37),
+                              padding: EdgeInsets.only(left: w * 0.338),
                               child: Text(
                                 "Mobile",
                                 style: TextStyle(
@@ -1171,7 +1266,7 @@ class _AdmineManageClientState extends State<AdmineManageClient> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.only(left: w * 0.23),
+                              padding: EdgeInsets.only(left: w * 0.21),
                               child: Text(
                                 "State",
                                 style: TextStyle(
@@ -1211,7 +1306,7 @@ class _AdmineManageClientState extends State<AdmineManageClient> {
                               ),
                             ),
                             Container(
-                              margin: EdgeInsets.only(left: w * 0.0),
+                              margin: EdgeInsets.only(left: w * 0.03),
                               height: h * 0.065,
                               width: w * 0.18,
                               decoration: BoxDecoration(
@@ -1413,7 +1508,7 @@ class _AdmineManageClientState extends State<AdmineManageClient> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.only(left: w * 0.225),
+                              padding: EdgeInsets.only(left: w * 0.2),
                               child: Text(
                                 "State",
                                 style: TextStyle(
@@ -1452,23 +1547,25 @@ class _AdmineManageClientState extends State<AdmineManageClient> {
                                 ),
                               ),
                             ),
-                            Container(
-                              margin: EdgeInsets.only(left: w * 0.01),
-                              height: h * 0.065,
-                              width: w * 0.18,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(5),
-                                color: Color(0xffFFFFFF),
-                              ),
-                              child: Padding(
-                                padding: EdgeInsets.only(left: w * 0.01),
-                                child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: "Enter Here",
-                                    hintStyle: TextStyle(
-                                      fontSize: 10,
+                            Padding(
+                              padding: EdgeInsets.only(left: h * 0.08),
+                              child: Container(
+                                height: h * 0.065,
+                                width: w * 0.18,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(5),
+                                  color: Color(0xffFFFFFF),
+                                ),
+                                child: Padding(
+                                  padding: EdgeInsets.only(left: w * 0.01),
+                                  child: TextFormField(
+                                    decoration: InputDecoration(
+                                      hintText: "Enter Here",
+                                      hintStyle: TextStyle(
+                                        fontSize: 10,
+                                      ),
+                                      border: InputBorder.none,
                                     ),
-                                    border: InputBorder.none,
                                   ),
                                 ),
                               ),
@@ -1652,7 +1749,7 @@ class _AdmineManageClientState extends State<AdmineManageClient> {
                               ),
                             ),
                             Padding(
-                              padding: EdgeInsets.only(left: w * 0.225),
+                              padding: EdgeInsets.only(left: w * 0.2),
                               child: Text(
                                 "State",
                                 style: TextStyle(
@@ -1691,23 +1788,25 @@ class _AdmineManageClientState extends State<AdmineManageClient> {
                                 ),
                               ),
                             ),
-                            Container(
-                              margin: EdgeInsets.only(left: w * 0.01),
-                              height: h * 0.065,
-                              width: w * 0.18,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(5),
-                                color: Color(0xffFFFFFF),
-                              ),
-                              child: Padding(
-                                padding: EdgeInsets.only(left: w * 0.01),
-                                child: TextFormField(
-                                  decoration: InputDecoration(
-                                    hintText: "Enter Here",
-                                    hintStyle: TextStyle(
-                                      fontSize: 10,
+                            Padding(
+                              padding: EdgeInsets.only(left: w * 0.04),
+                              child: Container(
+                                height: h * 0.065,
+                                width: w * 0.18,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(5),
+                                  color: Color(0xffFFFFFF),
+                                ),
+                                child: Padding(
+                                  padding: EdgeInsets.only(left: w * 0.01),
+                                  child: TextFormField(
+                                    decoration: InputDecoration(
+                                      hintText: "Enter Here",
+                                      hintStyle: TextStyle(
+                                        fontSize: 10,
+                                      ),
+                                      border: InputBorder.none,
                                     ),
-                                    border: InputBorder.none,
                                   ),
                                 ),
                               ),
