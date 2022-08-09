@@ -240,7 +240,7 @@ class _ClientSettingState extends State<ClientSetting>
                             text: "Geotagging",
                           ),
                           Tab(
-                            text: "Other Configaration",
+                            text: "Other Config.",
                           ),
                         ],
                         indicatorColor: Colors.black,
@@ -283,7 +283,7 @@ class _ClientSettingState extends State<ClientSetting>
                           text: "Geotagging",
                         ),
                         Tab(
-                          text: "Other Configaration",
+                          text: "Other Config..",
                         )
                       ],
                       indicatorColor: Colors.black,

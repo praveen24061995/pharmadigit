@@ -360,7 +360,7 @@ class _ClientCompanyState extends State<ClientCompany> {
                 child: Row(
                   children: [
                     Text(
-                      "Lead Qualification Status",
+                      "Territory",
                       style: TextStyle(
                         fontSize: 13,
                         fontWeight: FontWeight.w500,
@@ -369,7 +369,7 @@ class _ClientCompanyState extends State<ClientCompany> {
                     Padding(
                       padding: EdgeInsets.only(
                           left: (Responsive.isDesktop(context))
-                              ? w * 0.17
+                              ? w * 0.24
                               : w * 0.05),
                       child: Text(
                         "IP  Address Restriction",
@@ -417,7 +417,7 @@ class _ClientCompanyState extends State<ClientCompany> {
                   Padding(
                     padding: EdgeInsets.only(
                         left: (Responsive.isDesktop(context))
-                            ? w * 0.07
+                            ? w * 0.077
                             : w * 0.12),
                     child: Text('Yes',
                         style: new TextStyle(
