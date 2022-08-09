@@ -118,7 +118,10 @@ class _AdmineLeadState extends State<AdmineLead> {
                   child: DropdownButtonHideUnderline(
                     child: DropdownButton(
                       isExpanded: true,
-                      hint: Text('Select'),
+                      hint: Padding(
+                        padding: EdgeInsets.only(left: w * 0.01),
+                        child: Text('Select'),
+                      ),
                       value: _selectedLocation,
                       onChanged: (newValue) {
                         setState(() {
@@ -148,7 +151,10 @@ class _AdmineLeadState extends State<AdmineLead> {
                     child: DropdownButton(
                       isExpanded: true,
 
-                      hint: Text('Select'), // Not necessary for Option 1
+                      hint: Padding(
+                        padding: EdgeInsets.only(left: w * 0.01),
+                        child: Text('Select'),
+                      ), // Not necessary for Option 1
                       value: _select,
                       onChanged: (newValue) {
                         setState(() {
@@ -180,7 +186,10 @@ class _AdmineLeadState extends State<AdmineLead> {
                     child: DropdownButton(
                       isExpanded: true,
 
-                      hint: Text('Select'), // Not necessary for Option 1
+                      hint: Padding(
+                        padding: EdgeInsets.only(left: w * 0.01),
+                        child: Text('Select'),
+                      ), // Not necessary for Option 1
                       value: _selected,
                       onChanged: (newValue) {
                         setState(() {
@@ -217,7 +226,7 @@ class _AdmineLeadState extends State<AdmineLead> {
             Container(
               margin: EdgeInsets.only(left: w * 0.02),
               height: h * 0.06,
-              width: w * 0.2,
+              width: (Responsive.isDesktop(context)) ? w * 0.2 : w * 0.32,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(3.5),
                   color: Color(0xffFFFFFF)),
@@ -225,7 +234,10 @@ class _AdmineLeadState extends State<AdmineLead> {
                 child: DropdownButton(
                   isExpanded: true,
 
-                  hint: Text('Select'), // Not necessary for Option 1
+                  hint: Padding(
+                    padding: EdgeInsets.only(left: w * 0.01),
+                    child: Text('Select'),
+                  ), // Not necessary for Option 1
                   value: _selected1,
                   onChanged: (newValue) {
                     setState(() {

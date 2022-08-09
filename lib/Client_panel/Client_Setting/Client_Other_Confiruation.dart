@@ -4,14 +4,14 @@ import 'package:flutter/src/widgets/framework.dart';
 
 import '../../Responsive/Responsiv.dart';
 
-class AdmineOther extends StatefulWidget {
-  const AdmineOther({super.key});
+class ClientOtherConfi extends StatefulWidget {
+  const ClientOtherConfi({super.key});
 
   @override
-  State<AdmineOther> createState() => _AdmineOtherState();
+  State<ClientOtherConfi> createState() => _ClientOtherConfiState();
 }
 
-class _AdmineOtherState extends State<AdmineOther> {
+class _ClientOtherConfiState extends State<ClientOtherConfi> {
   List<String> _other = [
     'Well-known',
     'Known ',

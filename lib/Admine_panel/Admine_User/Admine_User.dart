@@ -61,7 +61,7 @@ class _AdmineUserState extends State<AdmineUser> {
                 Padding(
                   padding: EdgeInsets.only(
                       left:
-                          (Responsive.isDesktop(context)) ? w * 0.1 : w * 0.19),
+                          (Responsive.isDesktop(context)) ? w * 0.1 : w * 0.2),
                   child: Text(
                     "User Access Type",
                     style: TextStyle(
@@ -75,7 +75,7 @@ class _AdmineUserState extends State<AdmineUser> {
                       right:
                           (Responsive.isDesktop(context)) ? w * 0.17 : w * 0.0,
                       left:
-                          (Responsive.isDesktop(context)) ? w * 0.0 : w * 0.08),
+                          (Responsive.isDesktop(context)) ? w * 0.0 : w * 0.06),
                   child: Text(
                     "UserID Status",
                     style: TextStyle(
@@ -104,7 +104,10 @@ class _AdmineUserState extends State<AdmineUser> {
                   child: DropdownButtonHideUnderline(
                     child: DropdownButton(
                       isExpanded: true,
-                      hint: Text('Select'),
+                      hint: Padding(
+                        padding: EdgeInsets.only(left: w * 0.01),
+                        child: Text('Select'),
+                      ),
                       value: _userdrop,
                       onChanged: (newValue) {
                         setState(() {
@@ -134,7 +137,10 @@ class _AdmineUserState extends State<AdmineUser> {
                     child: DropdownButton(
                       isExpanded: true,
 
-                      hint: Text('Select'), // Not necessary for Option 1
+                      hint: Padding(
+                        padding: EdgeInsets.only(left: w * 0.01),
+                        child: Text('Select'),
+                      ), // Not necessary for Option 1
                       value: _userdrop1,
                       onChanged: (newValue) {
                         setState(() {
@@ -166,7 +172,10 @@ class _AdmineUserState extends State<AdmineUser> {
                     child: DropdownButton(
                       isExpanded: true,
 
-                      hint: Text('Select'), // Not necessary for Option 1
+                      hint: Padding(
+                        padding: EdgeInsets.only(left: w * 0.01),
+                        child: Text('Select'),
+                      ), // Not necessary for Option 1
                       value: _userdrop2,
                       onChanged: (newValue) {
                         setState(() {

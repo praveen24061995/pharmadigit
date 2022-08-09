@@ -1,4 +1,3 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pharmadigit/Admine_panel/Admine_Dashboard/Admine_Dashboaed.dart';
@@ -30,17 +29,8 @@ import 'Admine_panel/Admine_Subscription_Plan/Admine_ListPlanResponsive.dart';
 import 'Admine_panel/Admine_Subscription_Plan/Admine_ModifyPlanResponshive.dart';
 import 'Client_panel/Client_Dashboard/ClientDashboardResponse.dart';
 
-void main() async {
-  await EasyLocalization.ensureInitialized();
-  runApp(EasyLocalization(
-      supportedLocales: [
-        Locale('en', 'US'),
-        Locale('vt', 'US'),
-      ],
-      path:
-          'assets/translation', // <-- change the path of the translation files
-      fallbackLocale: Locale('en', 'US'),
-      child: MyApp()));
+void main() {
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -55,9 +45,6 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      localizationsDelegates: context.localizationDelegates,
-      supportedLocales: context.supportedLocales,
-      locale: context.locale,
       home: SplashScreen(),
       routes: {
         '/Adminelogin': (context) => BlocProvider(

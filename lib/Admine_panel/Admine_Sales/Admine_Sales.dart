@@ -57,7 +57,10 @@ class _AdmineSalesState extends State<AdmineSales> {
               child: DropdownButtonHideUnderline(
                 child: DropdownButton(
                   isExpanded: true,
-                  hint: Text('Select'),
+                  hint: Padding(
+                    padding: EdgeInsets.only(left: w * 0.01),
+                    child: Text('Select'),
+                  ),
                   value: _drop,
                   onChanged: (newValue) {
                     setState(() {

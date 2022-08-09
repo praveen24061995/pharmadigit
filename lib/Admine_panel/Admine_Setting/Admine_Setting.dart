@@ -25,7 +25,7 @@ class _AdmineSettingState extends State<AdmineSetting>
   var w;
   var h;
   void initState() {
-    _tabController = new TabController(length: 5, vsync: this);
+    _tabController = new TabController(length: 4, vsync: this);
     super.initState();
     // getbuyticket();
   }
@@ -229,9 +229,9 @@ class _AdmineSettingState extends State<AdmineSetting>
                           Tab(
                             text: "User",
                           ),
-                          Tab(
-                            text: "Other Configaration",
-                          ),
+                          // Tab(
+                          //   text: "Other Configaration",
+                          // ),
                         ],
                         indicatorColor: Colors.black,
                         labelStyle: const TextStyle(
@@ -263,9 +263,9 @@ class _AdmineSettingState extends State<AdmineSetting>
                         Tab(
                           text: "User",
                         ),
-                        Tab(
-                          text: "Other",
-                        ),
+                        // Tab(
+                        //   text: "Other",
+                        // ),
                       ],
                       indicatorColor: Colors.black,
                       labelStyle: const TextStyle(
@@ -284,7 +284,7 @@ class _AdmineSettingState extends State<AdmineSetting>
                     AdmineOpportunity(),
                     AdmineSales(),
                     AdmineUser(),
-                    AdmineOther(),
+                    // AdmineOther(),
                   ],
                   controller: _tabController,
                 ),

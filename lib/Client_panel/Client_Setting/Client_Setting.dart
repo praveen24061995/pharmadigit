@@ -8,6 +8,7 @@ import 'Client_Company.dart';
 import 'Client_Geotagging.dart';
 import 'Client_Lead.dart';
 import 'Client_Opportunity.dart';
+import 'Client_Other_Confiruation.dart';
 import 'Client_Sales.dart';
 
 class ClientSetting extends StatefulWidget {
@@ -25,7 +26,7 @@ class _ClientSettingState extends State<ClientSetting>
   var w;
   var h;
   void initState() {
-    _tabController = new TabController(length: 7, vsync: this);
+    _tabController = new TabController(length: 8, vsync: this);
     super.initState();
     // getbuyticket();
   }
@@ -238,6 +239,9 @@ class _ClientSettingState extends State<ClientSetting>
                           Tab(
                             text: "Geotagging",
                           ),
+                          Tab(
+                            text: "Other Configaration",
+                          ),
                         ],
                         indicatorColor: Colors.black,
                         labelStyle: const TextStyle(
@@ -278,6 +282,9 @@ class _ClientSettingState extends State<ClientSetting>
                         Tab(
                           text: "Geotagging",
                         ),
+                        Tab(
+                          text: "Other Configaration",
+                        )
                       ],
                       indicatorColor: Colors.black,
                       labelStyle: const TextStyle(
@@ -299,6 +306,7 @@ class _ClientSettingState extends State<ClientSetting>
                     ClientSales(),
                     ClientCCY(),
                     ClientGeotagging(),
+                    ClientOtherConfi(),
                   ],
                   controller: _tabController,
                 ),

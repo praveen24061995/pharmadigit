@@ -1334,7 +1334,7 @@ class _AdmineModifyPlanState extends State<AdmineModifyPlan> {
                               Container(
                                 margin: EdgeInsets.only(left: w * 0.015),
                                 height: h * 0.37,
-                                width: w * 0.4,
+                                width: w * 0.448,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(3),
                                   color: Color(0xffFFFFFF),
@@ -1345,7 +1345,7 @@ class _AdmineModifyPlanState extends State<AdmineModifyPlan> {
                                     Container(
                                       margin: EdgeInsets.all(5),
                                       height: h * 0.04,
-                                      width: w * 0.4,
+                                      width: w * 0.44,
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(4),
                                         color: Color(0xffF4F4F4),
@@ -1378,7 +1378,7 @@ class _AdmineModifyPlanState extends State<AdmineModifyPlan> {
                                     Container(
                                       margin: EdgeInsets.all(5),
                                       height: h * 0.04,
-                                      width: w * 0.4,
+                                      width: w * 0.44,
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(4),
                                         color: Color(0xffF4F4F4),
@@ -1411,7 +1411,7 @@ class _AdmineModifyPlanState extends State<AdmineModifyPlan> {
                                     Container(
                                       margin: EdgeInsets.all(5),
                                       height: h * 0.04,
-                                      width: w * 0.4,
+                                      width: w * 0.44,
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(4),
                                         color: Color(0xffF4F4F4),
@@ -1444,7 +1444,7 @@ class _AdmineModifyPlanState extends State<AdmineModifyPlan> {
                                     Container(
                                       margin: EdgeInsets.all(5),
                                       height: h * 0.04,
-                                      width: w * 0.4,
+                                      width: w * 0.44,
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(4),
                                         color: Color(0xffF4F4F4),
@@ -1477,7 +1477,7 @@ class _AdmineModifyPlanState extends State<AdmineModifyPlan> {
                                     Container(
                                       margin: EdgeInsets.all(5),
                                       height: h * 0.04,
-                                      width: w * 0.4,
+                                      width: w * 0.44,
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(4),
                                         color: Color(0xffF4F4F4),
@@ -1510,7 +1510,7 @@ class _AdmineModifyPlanState extends State<AdmineModifyPlan> {
                                     Container(
                                       margin: EdgeInsets.all(5),
                                       height: h * 0.04,
-                                      width: w * 0.4,
+                                      width: w * 0.44,
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(4),
                                         color: Color(0xffF4F4F4),
@@ -1543,7 +1543,7 @@ class _AdmineModifyPlanState extends State<AdmineModifyPlan> {
                                     Container(
                                       margin: EdgeInsets.all(5),
                                       height: h * 0.04,
-                                      width: w * 0.4,
+                                      width: w * 0.44,
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(4),
                                         color: Color(0xffF4F4F4),
@@ -1710,7 +1710,7 @@ class _AdmineModifyPlanState extends State<AdmineModifyPlan> {
                                             padding:
                                                 EdgeInsets.only(left: w * 0.00),
                                             child: Text(
-                                              "Knowledge",
+                                              "Knowledgebase",
                                               style: TextStyle(
                                                 fontSize: 10,
                                                 fontWeight: FontWeight.w500,

@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'dart:ui';
 
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -194,37 +193,37 @@ class _AdmineAddPlanState extends State<AdmineAddPlan> {
                                     ),
                                     InkWell(
                                       onTap: () {
-                                        DropdownButton<String>(
-                                          hint: Text("chooselanguage"),
-                                          value: dropdownvalue,
-                                          dropdownColor: Colors.white,
-                                          focusColor: Colors.white,
-                                          // Down Arrow Icon
+                                        // DropdownButton<String>(
+                                        //   hint: Text("chooselanguage"),
+                                        //   value: dropdownvalue,
+                                        //   dropdownColor: Colors.white,
+                                        //   focusColor: Colors.white,
+                                        //   // Down Arrow Icon
 
-                                          icon: Icon(Icons.arrow_drop_down),
-                                          iconSize: 30,
-                                          elevation: 16,
-                                          style: TextStyle(color: Colors.black),
-                                          onChanged: (String? newValue) {
-                                            setState(() {
-                                              dropdownvalue = newValue!;
-                                            });
-                                            if (dropdownvalue == "English") {
-                                              context.locale =
-                                                  Locale("en", "US");
-                                            } else if (dropdownvalue ==
-                                                "'Vietnamese'") {
-                                              context.locale =
-                                                  Locale("vt", "US");
-                                            }
-                                          },
-                                          items: items.map((String items) {
-                                            return DropdownMenuItem(
-                                              value: items,
-                                              child: Text(items),
-                                            );
-                                          }).toList(),
-                                        );
+                                        //   icon: Icon(Icons.arrow_drop_down),
+                                        //   iconSize: 30,
+                                        //   elevation: 16,
+                                        //   style: TextStyle(color: Colors.black),
+                                        //   onChanged: (String? newValue) {
+                                        //     setState(() {
+                                        //       dropdownvalue = newValue!;
+                                        //     });
+                                        //     if (dropdownvalue == "English") {
+                                        //       context.locale =
+                                        //           Locale("en", "US");
+                                        //     } else if (dropdownvalue ==
+                                        //         "'Vietnamese'") {
+                                        //       context.locale =
+                                        //           Locale("vt", "US");
+                                        //     }
+                                        //   },
+                                        //   items: items.map((String items) {
+                                        //     return DropdownMenuItem(
+                                        //       value: items,
+                                        //       child: Text(items),
+                                        //     );
+                                        //   }).toList(),
+                                        // );
                                       },
                                       child: Container(
                                         margin: EdgeInsets.only(left: 13),
@@ -1378,7 +1377,7 @@ class _AdmineAddPlanState extends State<AdmineAddPlan> {
                               Container(
                                 margin: EdgeInsets.only(left: w * 0.015),
                                 height: h * 0.37,
-                                width: w * 0.4,
+                                width: w * 0.448,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(3),
                                   color: Color(0xffFFFFFF),
@@ -1389,7 +1388,7 @@ class _AdmineAddPlanState extends State<AdmineAddPlan> {
                                     Container(
                                       margin: EdgeInsets.all(5),
                                       height: h * 0.04,
-                                      width: w * 0.4,
+                                      width: w * 0.44,
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(4),
                                         color: Color(0xffF4F4F4),
@@ -1422,7 +1421,7 @@ class _AdmineAddPlanState extends State<AdmineAddPlan> {
                                     Container(
                                       margin: EdgeInsets.all(5),
                                       height: h * 0.04,
-                                      width: w * 0.4,
+                                      width: w * 0.44,
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(4),
                                         color: Color(0xffF4F4F4),
@@ -1455,7 +1454,7 @@ class _AdmineAddPlanState extends State<AdmineAddPlan> {
                                     Container(
                                       margin: EdgeInsets.all(5),
                                       height: h * 0.04,
-                                      width: w * 0.4,
+                                      width: w * 0.44,
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(4),
                                         color: Color(0xffF4F4F4),
@@ -1488,7 +1487,7 @@ class _AdmineAddPlanState extends State<AdmineAddPlan> {
                                     Container(
                                       margin: EdgeInsets.all(5),
                                       height: h * 0.04,
-                                      width: w * 0.4,
+                                      width: w * 0.44,
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(4),
                                         color: Color(0xffF4F4F4),
@@ -1521,7 +1520,7 @@ class _AdmineAddPlanState extends State<AdmineAddPlan> {
                                     Container(
                                       margin: EdgeInsets.all(5),
                                       height: h * 0.04,
-                                      width: w * 0.4,
+                                      width: w * 0.44,
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(4),
                                         color: Color(0xffF4F4F4),
@@ -1554,7 +1553,7 @@ class _AdmineAddPlanState extends State<AdmineAddPlan> {
                                     Container(
                                       margin: EdgeInsets.all(5),
                                       height: h * 0.04,
-                                      width: w * 0.4,
+                                      width: w * 0.44,
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(4),
                                         color: Color(0xffF4F4F4),
@@ -1587,7 +1586,7 @@ class _AdmineAddPlanState extends State<AdmineAddPlan> {
                                     Container(
                                       margin: EdgeInsets.all(5),
                                       height: h * 0.04,
-                                      width: w * 0.4,
+                                      width: w * 0.44,
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(4),
                                         color: Color(0xffF4F4F4),
@@ -1754,7 +1753,7 @@ class _AdmineAddPlanState extends State<AdmineAddPlan> {
                                             padding:
                                                 EdgeInsets.only(left: w * 0.00),
                                             child: Text(
-                                              "Knowledge",
+                                              "Knowledgebase",
                                               style: TextStyle(
                                                 fontSize: 10,
                                                 fontWeight: FontWeight.w500,
